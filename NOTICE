@@ -1,0 +1,23 @@
+TRACE-MoE: Open-Set Detection of Unknown Attacks in the Internet of Medical Things
+Using a Mixture-of-Experts Model and Energy Scores
+
+Copyright (c) 2026 Sudhir Kumar Sharma and Sneha Vasishth
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Dataset:
+  CICIoMT2024 (Wi-Fi and MQTT subset) is published by Dadkhah et al. (2024),
+  Internet of Things 28, DOI 10.1016/j.iot.2024.101351. It is not redistributed
+  here; see data_access.md for download instructions and its own license terms.
+
+Third-party Python dependencies are listed in requirements.txt with their own licenses.
+Key dependencies and their licenses:
+  PyTorch    -- BSD 3-Clause (https://github.com/pytorch/pytorch/blob/main/LICENSE)
+  NumPy      -- BSD 3-Clause (https://numpy.org/doc/stable/license.html)
+  pandas     -- BSD 3-Clause (https://github.com/pandas-dev/pandas/blob/main/LICENSE)
+  scikit-learn -- BSD 3-Clause (https://github.com/scikit-learn/scikit-learn/blob/main/COPYING)
+  SciPy      -- BSD 3-Clause (https://github.com/scipy/scipy/blob/main/LICENSE.txt)
+  Matplotlib -- PSF-based (https://matplotlib.org/stable/users/project/license.html)
+  PyYAML     -- MIT (https://github.com/yaml/pyyaml/blob/master/LICENSE)
+  joblib     -- BSD 3-Clause (https://github.com/joblib/joblib/blob/master/LICENSE.txt)
+  tqdm       -- MIT/MPL-2.0 (https://github.com/tqdm/tqdm/blob/master/LICENCE)
+  pyarrow    -- Apache 2.0 (https://github.com/apache/arrow/blob/main/LICENSE.txt)

@@ -1,0 +1,15 @@
+{
+  "auroc": 0.9358122845493868,
+  "fpr_at_95tpr": 0.1327974547884204,
+  "n_known": 1575979,
+  "n_unknown": 8401,
+  "held_out_class": "MQTT-DDoS-Publish_Flood",
+  "seed": 42,
+  "model": "trace_moe",
+  "mean_D_min_unknown": 1.0682415140696486,
+  "mean_D_min_known": 0.44698839606391305,
+  "std_D_min": 0.4378554657016301,
+  "twin_profile": "results_v3_paper3\\twin\\twin_profile_loao_MQTT-DDoS-Publish_Flood.npz",
+  "n_test_windows": 1584380,
+  "charter_version": "Paper 4 Charter v1.2 (DRAFT), H5 twin-alone AUROC"
+}

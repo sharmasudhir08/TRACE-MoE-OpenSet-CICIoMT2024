@@ -1,0 +1,259 @@
+{
+  "generated_at_utc": "2026-11-13T23:53:42.501549+00:00",
+  "charter_version": "v1.3 (SHA-verified); statistical recipe v1.1; seed scope extended per v1.2",
+  "charter_sha256": "130767067f36261dca0370a12c418da70bf081a249ce380f6df613508f675a42",
+  "charter_locked_at": "2026-11-13 (v1.3 lock)",
+  "v1_0_archived_at": "results_v3_paper3/h8_verdict_v1_0_superseded",
+  "v1_1_3seed_archived_at": "results_v3_paper3/h8_verdict_v1_1_3seed_superseded",
+  "bootstrap_resamples": 10000,
+  "bootstrap_rng_seed": 42,
+  "scope": {
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "models": [
+      "trace_moe",
+      "transformer",
+      "bilstm_dnn"
+    ],
+    "classes": [
+      "ARP_Spoofing",
+      "Recon-VulScan",
+      "MQTT-Malformed_Data",
+      "TCP_IP-DoS-UDP",
+      "MQTT-DDoS-Publish_Flood"
+    ],
+    "total_runs": 75
+  },
+  "H1": {
+    "overall_verdict": "SUPPORTED (strong, overall)",
+    "per_class_breakdown": {
+      "SUPPORTED (strong)": 5,
+      "SUPPORTED (preliminary)": 0,
+      "INCONCLUSIVE": 0,
+      "NOT SUPPORTED": 0
+    }
+  },
+  "H2": {
+    "per_model_breakdown": {
+      "trace_moe": {
+        "verdict": "NOT SUPPORTED",
+        "SUPPORTED": 0,
+        "SUPPORTED (preliminary)": 1,
+        "INCONCLUSIVE": 1,
+        "NOT SUPPORTED": 3
+      },
+      "transformer": {
+        "verdict": "MIXED",
+        "SUPPORTED": 0,
+        "SUPPORTED (preliminary)": 1,
+        "INCONCLUSIVE": 2,
+        "NOT SUPPORTED": 2
+      },
+      "bilstm_dnn": {
+        "verdict": "NOT SUPPORTED",
+        "SUPPORTED": 0,
+        "SUPPORTED (preliminary)": 1,
+        "INCONCLUSIVE": 0,
+        "NOT SUPPORTED": 4
+      }
+    },
+    "primary_question": "Does energy abstention outperform MSP for TRACE-MoE?",
+    "primary_answer": "NOT SUPPORTED"
+  },
+  "H3": {
+    "per_baseline_breakdown": {
+      "transformer": {
+        "verdict": "SUPPORTED (preliminary)",
+        "SUPPORTED": 2,
+        "SUPPORTED (preliminary)": 1,
+        "INCONCLUSIVE": 1,
+        "NOT SUPPORTED": 1
+      },
+      "bilstm_dnn": {
+        "verdict": "SUPPORTED (strong)",
+        "SUPPORTED": 4,
+        "SUPPORTED (preliminary)": 0,
+        "INCONCLUSIVE": 1,
+        "NOT SUPPORTED": 0
+      }
+    }
+  },
+  "H4": {
+    "overall_verdict": "INCONCLUSIVE (overall; \u22653 pairs inconclusive at 5-seed scope)",
+    "breakdown": {
+      "SUPPORTED": 11,
+      "INCONCLUSIVE": 4,
+      "NOT SUPPORTED": 0
+    },
+    "margin_pt": 10
+  },
+  "ESA1": {
+    "target_coverage": 0.95,
+    "target_far": 0.05,
+    "overall_mean_far": 0.04627290597230062,
+    "report_only": "Direction-only reporting per Charter; no formal verdict"
+  },
+  "ESA2": {
+    "status": "DEFERRED",
+    "blocker": "per-sample energy not in predictions.npz",
+    "recommended_resolution": "Option B \u2014 post-hoc energy recompute from model.pt"
+  },
+  "inconclusive_pairs": [
+    {
+      "hypothesis": "H2",
+      "pair": "trace_moe \u00d7 TCP_IP-DoS-UDP",
+      "reason": "mean_diff=-0.1155, CI=[-0.2388, +0.0044] includes 0"
+    },
+    {
+      "hypothesis": "H2",
+      "pair": "transformer \u00d7 Recon-VulScan",
+      "reason": "mean_diff=-0.0668, CI=[-0.1951, +0.0615] includes 0"
+    },
+    {
+      "hypothesis": "H2",
+      "pair": "transformer \u00d7 MQTT-Malformed_Data",
+      "reason": "mean_diff=-0.0346, CI=[-0.1186, +0.0124] includes 0"
+    },
+    {
+      "hypothesis": "H3",
+      "pair": "TRACE-MoE vs transformer \u00d7 TCP_IP-DoS-UDP",
+      "reason": "mean_diff=-0.0888, CI=[-0.4373, +0.2596] includes 0"
+    },
+    {
+      "hypothesis": "H3",
+      "pair": "TRACE-MoE vs bilstm_dnn \u00d7 TCP_IP-DoS-UDP",
+      "reason": "mean_diff=-0.2150, CI=[-0.4467, +0.0554] includes 0"
+    },
+    {
+      "hypothesis": "H4",
+      "pair": "bilstm_dnn \u00d7 Recon-VulScan",
+      "reason": "mean_degr=+0.0680, CI=[-0.0006, +0.1497] straddles 0.10 (v1.1 threshold)"
+    },
+    {
+      "hypothesis": "H4",
+      "pair": "bilstm_dnn \u00d7 MQTT-Malformed_Data",
+      "reason": "mean_degr=+0.0523, CI=[-0.0000, +0.1227] straddles 0.10 (v1.1 threshold)"
+    },
+    {
+      "hypothesis": "H4",
+      "pair": "bilstm_dnn \u00d7 TCP_IP-DoS-UDP",
+      "reason": "mean_degr=+0.0827, CI=[+0.0011, +0.1653] straddles 0.10 (v1.1 threshold)"
+    },
+    {
+      "hypothesis": "H4",
+      "pair": "bilstm_dnn \u00d7 MQTT-DDoS-Publish_Flood",
+      "reason": "mean_degr=+0.0635, CI=[-0.0186, +0.1505] straddles 0.10 (v1.1 threshold)"
+    }
+  ],
+  "surprises_v1_0_to_v1_1": [
+    {
+      "hypothesis": "H2",
+      "pair": "trace_moe \u00d7 ARP_Spoofing",
+      "v1_0": "INCONCLUSIVE",
+      "v1_1": "NOT SUPPORTED"
+    },
+    {
+      "hypothesis": "H2",
+      "pair": "trace_moe \u00d7 MQTT-Malformed_Data",
+      "v1_0": "INCONCLUSIVE",
+      "v1_1": "NOT SUPPORTED"
+    },
+    {
+      "hypothesis": "H2",
+      "pair": "trace_moe \u00d7 MQTT-DDoS-Publish_Flood",
+      "v1_0": "SUPPORTED",
+      "v1_1": "SUPPORTED (preliminary)"
+    },
+    {
+      "hypothesis": "H2",
+      "pair": "transformer \u00d7 ARP_Spoofing",
+      "v1_0": "INCONCLUSIVE",
+      "v1_1": "NOT SUPPORTED"
+    },
+    {
+      "hypothesis": "H2",
+      "pair": "transformer \u00d7 TCP_IP-DoS-UDP",
+      "v1_0": "INCONCLUSIVE",
+      "v1_1": "SUPPORTED (preliminary)"
+    },
+    {
+      "hypothesis": "H2",
+      "pair": "bilstm_dnn \u00d7 MQTT-DDoS-Publish_Flood",
+      "v1_0": "SUPPORTED",
+      "v1_1": "SUPPORTED (preliminary)"
+    },
+    {
+      "hypothesis": "H3",
+      "pair": "transformer \u00d7 ARP_Spoofing",
+      "v1_0": "INCONCLUSIVE",
+      "v1_1": "NOT SUPPORTED"
+    },
+    {
+      "hypothesis": "H3",
+      "pair": "transformer \u00d7 Recon-VulScan",
+      "v1_0": "INCONCLUSIVE",
+      "v1_1": "SUPPORTED"
+    },
+    {
+      "hypothesis": "H3",
+      "pair": "transformer \u00d7 MQTT-Malformed_Data",
+      "v1_0": "SUPPORTED",
+      "v1_1": "SUPPORTED (preliminary)"
+    },
+    {
+      "hypothesis": "H3",
+      "pair": "bilstm_dnn \u00d7 TCP_IP-DoS-UDP",
+      "v1_0": "NOT SUPPORTED",
+      "v1_1": "INCONCLUSIVE"
+    }
+  ],
+  "surprises_v1_1_3seed_to_v1_3_5seed": [
+    {
+      "hypothesis": "H2",
+      "pair": "trace_moe \u00d7 MQTT-DDoS-Publish_Flood",
+      "v1_0": "SUPPORTED",
+      "v1_1": "SUPPORTED (preliminary)"
+    },
+    {
+      "hypothesis": "H2",
+      "pair": "transformer \u00d7 TCP_IP-DoS-UDP",
+      "v1_0": "INCONCLUSIVE",
+      "v1_1": "SUPPORTED (preliminary)"
+    },
+    {
+      "hypothesis": "H2",
+      "pair": "bilstm_dnn \u00d7 MQTT-DDoS-Publish_Flood",
+      "v1_0": "SUPPORTED",
+      "v1_1": "SUPPORTED (preliminary)"
+    },
+    {
+      "hypothesis": "H3",
+      "pair": "transformer \u00d7 Recon-VulScan",
+      "v1_0": "SUPPORTED (preliminary)",
+      "v1_1": "SUPPORTED"
+    },
+    {
+      "hypothesis": "H3",
+      "pair": "transformer \u00d7 MQTT-Malformed_Data",
+      "v1_0": "SUPPORTED",
+      "v1_1": "SUPPORTED (preliminary)"
+    },
+    {
+      "hypothesis": "H3",
+      "pair": "bilstm_dnn \u00d7 TCP_IP-DoS-UDP",
+      "v1_0": "NOT SUPPORTED",
+      "v1_1": "INCONCLUSIVE"
+    },
+    {
+      "hypothesis": "H4",
+      "pair": "bilstm_dnn \u00d7 ARP_Spoofing",
+      "v1_0": "INCONCLUSIVE",
+      "v1_1": "SUPPORTED"
+    }
+  ]
+}

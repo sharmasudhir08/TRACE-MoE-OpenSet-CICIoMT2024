@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.env
+.venv/
+venv/
+
+# Data and model artefacts (not redistributed)
+data/raw/
+data/processed/
+results_v*/
+logs_v*/
+*.pt
+*.npz
+*.parquet
+
+# IDE and OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Local notebooks and scratch
+*.ipynb
+scratch/

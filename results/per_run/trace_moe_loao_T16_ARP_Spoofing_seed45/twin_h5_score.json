@@ -1,0 +1,15 @@
+{
+  "auroc": 0.9230854645061745,
+  "fpr_at_95tpr": 0.3621172310875956,
+  "n_known": 1582123,
+  "n_unknown": 1729,
+  "held_out_class": "ARP_Spoofing",
+  "seed": 45,
+  "model": "trace_moe",
+  "mean_D_min_unknown": 1.1872969021328448,
+  "mean_D_min_known": 0.4571026098132734,
+  "std_D_min": 0.4572717584183897,
+  "twin_profile": "results_v3_paper3\\twin\\twin_profile_loao_ARP_Spoofing.npz",
+  "n_test_windows": 1583852,
+  "charter_version": "Paper 4 Charter v1.2 (DRAFT), H5 twin-alone AUROC"
+}

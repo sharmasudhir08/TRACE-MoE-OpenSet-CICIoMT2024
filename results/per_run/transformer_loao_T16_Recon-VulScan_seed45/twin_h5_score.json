@@ -1,0 +1,15 @@
+{
+  "auroc": 0.7689436109627787,
+  "fpr_at_95tpr": 0.7203445111082457,
+  "n_known": 1582068,
+  "n_unknown": 1016,
+  "held_out_class": "Recon-VulScan",
+  "seed": 45,
+  "model": "transformer",
+  "mean_D_min_unknown": 0.9601023224026939,
+  "mean_D_min_known": 0.45071772144220384,
+  "std_D_min": 0.46450991525960617,
+  "twin_profile": "results_v3_paper3\\twin\\twin_profile_loao_Recon-VulScan.npz",
+  "n_test_windows": 1583084,
+  "charter_version": "Paper 4 Charter v1.2 (DRAFT), H5 twin-alone AUROC"
+}

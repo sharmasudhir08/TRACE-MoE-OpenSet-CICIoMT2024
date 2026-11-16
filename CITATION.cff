@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below."
+title: "TRACE-MoE: Open-Set Detection of Unknown Attacks in the Internet of Medical Things Using a Mixture-of-Experts Model and Energy Scores"
+authors:
+  - family-names: Sharma
+    given-names: Sudhir Kumar
+    affiliation: "Sharda School of Computing Science and Engineering, Sharda University, Greater Noida 201310, India"
+    orcid: "https://orcid.org/0000-0003-4838-8481"
+  - family-names: Vasishth
+    given-names: Sneha
+    affiliation: "LeewayHertz, Department of Data Science, Sector 47, Gurugram, Haryana 122001, India"
+    orcid: "https://orcid.org/0009-0003-7475-5131"
+repository-code: "https://github.com/sharmasudhir08/TRACE-MoE-OpenSet-CICIoMT2024"
+license: Apache-2.0
+version: "1.0.0"
+date-released: "2026-11-16"
+keywords:
+  - "IoMT intrusion detection"
+  - "open-set recognition"
+  - "mixture of experts"
+  - "energy-based out-of-distribution detection"
+  - "leave-one-attack-out"
+  - "CICIoMT2024"

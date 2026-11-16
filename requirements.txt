@@ -1,0 +1,16 @@
+# Python 3.12.4
+# PyTorch with GPU: install it first with the command for your CUDA version:
+#   https://pytorch.org/get-started/locally/
+# e.g.  pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+# Then install the rest:
+#   pip install -r requirements.txt
+torch==2.5.1
+numpy==2.5.3
+pandas==3.0.6
+pyarrow==25.0.1
+scikit-learn==1.9.1
+scipy==1.18.1
+matplotlib==3.11.2
+PyYAML==6.0.3
+joblib==1.6.0
+tqdm==4.70.1

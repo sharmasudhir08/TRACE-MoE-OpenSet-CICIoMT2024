@@ -1,0 +1,15 @@
+{
+  "auroc": 0.8872137501204014,
+  "fpr_at_95tpr": 0.3231491292176741,
+  "n_known": 1581796,
+  "n_unknown": 1732,
+  "held_out_class": "MQTT-Malformed_Data",
+  "seed": 44,
+  "model": "transformer",
+  "mean_D_min_unknown": 1.3806368198195558,
+  "mean_D_min_known": 0.452203413362113,
+  "std_D_min": 0.44723125303532624,
+  "twin_profile": "results_v3_paper3\\twin\\twin_profile_loao_MQTT-Malformed_Data.npz",
+  "n_test_windows": 1583528,
+  "charter_version": "Paper 4 Charter v1.2 (DRAFT), H5 twin-alone AUROC"
+}

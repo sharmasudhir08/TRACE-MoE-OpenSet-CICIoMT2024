@@ -1,0 +1,15 @@
+{
+  "auroc": 0.9216599560907027,
+  "fpr_at_95tpr": 0.2099872499073475,
+  "n_known": 1446264,
+  "n_unknown": 137538,
+  "held_out_class": "TCP_IP-DoS-UDP",
+  "seed": 46,
+  "model": "bilstm_dnn",
+  "mean_D_min_unknown": 15.710968026192578,
+  "mean_D_min_known": 5.508202505373234,
+  "std_D_min": 6.5493334012564235,
+  "twin_profile": "results_v3_paper3\\twin\\twin_profile_loao_TCP_IP-DoS-UDP.npz",
+  "n_test_windows": 1583802,
+  "charter_version": "Paper 4 Charter v1.2 (DRAFT), H5 twin-alone AUROC"
+}
